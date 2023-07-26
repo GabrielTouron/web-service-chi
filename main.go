@@ -20,7 +20,7 @@ func main() {
 	r := chi.NewRouter()
 	r.Use(middleware.Logger)
 
-	db, err := sql.Open("postgres", "postgres://postgres:example@localhost:5432/postgres?sslmode=disable")
+	db, err := sql.Open("postgres", "postgres://postgres:password@localhost:5432/postgres?sslmode=disable")
 
 	if err != nil {
 		panic(err)

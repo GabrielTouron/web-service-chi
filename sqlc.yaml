@@ -4,7 +4,7 @@ sql:
     queries: "queries.sql"
     schema: "migrations"
     database:
-      uri: "postgresql://postgres:example@localhost:5432/postgres"
+      uri: "postgresql://postgres:password@localhost:5432/postgres?sslmode=disable"
     gen:
       go:
         package: "postgresql"

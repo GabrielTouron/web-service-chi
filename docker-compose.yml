@@ -6,7 +6,7 @@ services:
     ports:
       - 127.0.0.1:5432:5432 
     environment:
-      POSTGRES_PASSWORD: example
+      POSTGRES_PASSWORD: password 
 
   adminer:
     image: adminer
