@@ -1,0 +1,8 @@
+github.com/dustinkirkland/golang-petname v0.0.0-20230626224747-e794b9370d49 h1:6SNWi8VxQeCSwmLuTbEvJd7xvPmdS//zvMBWweZLgck=
+github.com/dustinkirkland/golang-petname v0.0.0-20230626224747-e794b9370d49/go.mod h1:V+Qd57rJe8gd4eiGzZyg4h54VLHmYVVw54iMnlAMrF8=
+github.com/go-chi/chi/v5 v5.0.10 h1:rLz5avzKpjqxrYwXNfmjkrYYXOyLJd37pz53UFHC6vk=
+github.com/go-chi/chi/v5 v5.0.10/go.mod h1:DslCQbL2OYiznFReuXYUmQ2hGd1aDpCnlMNITLSKoi8=
+github.com/lib/pq v1.10.9 h1:YXG7RB+JIjhP29X+OtkiDnYaXQwpS4JEWq7dtCCRUEw=
+github.com/lib/pq v1.10.9/go.mod h1:AlVN5x4E4T544tWzH6hKfbfQvm3HdbOxrmggDNAPY9o=
+github.com/pressly/goose/v3 v3.13.4 h1:9xRcg/hEU9HqeRNeKh69VLtPWCKAYTX6l2VsXWOX86A=
+github.com/pressly/goose/v3 v3.13.4/go.mod h1:Fo8rYaf9tYfQiDpo+ymrnZi8vvLkvguRl16nu7QnUT4=

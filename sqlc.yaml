@@ -1,0 +1,11 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "queries.sql"
+    schema: "migrations"
+    database:
+      uri: "postgresql://postgres:example@localhost:5432/postgres"
+    gen:
+      go:
+        package: "postgresql"
+        out: "postgresql"
