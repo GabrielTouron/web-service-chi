@@ -4,12 +4,12 @@ import (
 	"context"
 	"encoding/json"
 	"example/chi/auth"
+	"example/chi/db"
 	"example/chi/postgresql"
 	"log"
-	"example/chi/db"
 
-	"net/http"
 	"github.com/go-chi/chi/v5"
+	"net/http"
 )
 
 type usersResource struct {

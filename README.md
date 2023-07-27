@@ -4,9 +4,11 @@
 
 - [x] Migration
 - [x] Seeding
-- [ ] Router
-- [ ] Auth
+- [x] Router
+- [ ] Auth (En cours)
+- [ ] 0auth
 - [ ] OpenAPI
+- [ ] Validator
 
 ## Install
 

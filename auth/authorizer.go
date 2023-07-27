@@ -7,6 +7,7 @@ import (
 	"github.com/go-chi/chi/v5"
 	"example/chi/db"
 	"net/http"
+	// "github.com/go-chi/jwtauth/v5"
 )
 
 type AuthResource struct {
