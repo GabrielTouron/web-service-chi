@@ -2,8 +2,9 @@ package main
 
 import (
 	"context"
-	"database/sql"
 	"encoding/json"
+	"example/chi/auth"
+	"example/chi/db"
 	"example/chi/postgresql"
 	"fmt"
 	"github.com/go-chi/chi/v5"
@@ -17,24 +18,23 @@ import (
 func main() {
 	ctx := context.Background()
 
+	db.Connect()
+
+	queries := postgresql.New(db.Database)
+
+	ap := db.AppResource{Queries: queries}
+
 	r := chi.NewRouter()
+
 	r.Use(middleware.Logger)
 
-	db, err := sql.Open("postgres", "postgres://postgres:password@localhost:5432/postgres?sslmode=disable")
-
-	if err != nil {
-		panic(err)
-	}
-
-	queries := postgresql.New(db)
-
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
-
 		w.Write([]byte("Hello World!"))
 	})
 
 	r.Get("/commands", func(w http.ResponseWriter, r *http.Request) {
-		commands, err := queries.ListCommands(ctx)
+
+		commands, err := ap.Queries.ListCommands(ctx)
 		if err != nil {
 			panic(err)
 		}
@@ -51,5 +51,9 @@ func main() {
 		w.Header().Set("Content-Type", "application/json")
 		w.Write(jsonData)
 	})
+
+	r.Mount("/users", usersResource{ap}.Routes())
+	r.Mount("/", auth.AuthResource{ap}.Routes())
+
 	http.ListenAndServe(":3000", r)
 }

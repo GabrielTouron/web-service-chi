@@ -14,3 +14,12 @@ type Command struct {
 	Command   string
 	CreatedAt time.Time
 }
+
+type User struct {
+	ID        int32
+	Name      string
+	Email     string
+	Password  string
+	CreatedAt time.Time
+	UpdatedAt time.Time
+}
